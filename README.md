@@ -12,9 +12,9 @@ Supports - int, float and varchar data types
 The record structure is as follows:
 version, null-byte array, field-offsets array, field1, field2, field3, ...
 
--> Version can be used for schema versioning, or to indicate if the record is a tombstone (record was moved to other page)
--> null-byte array indicates which field are NULL.
--> field-offsets array contains offsets of fields relative to the start of the record.
+-> Version can be used for schema versioning, or to indicate if the record is a tombstone (record was moved to other page)\n
+-> null-byte array indicates which field are NULL\n
+-> field-offsets array contains offsets of fields relative to the start of the record\n
 
 For int and float, 4 bytes are used.
 For varchar, 4 bytes are used to store length of characters, then 1-byte per character.
