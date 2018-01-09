@@ -25,7 +25,6 @@ For varchar, 4 bytes are used to store length of characters, then 1-byte per cha
 <br>
 
 ## Insert, Delete, Update
-
 Insert: The db-file is searched for a page, such that it has enough space to accomodate the record.
 <br><br>
 Delete: The corresponding record is deleted from the page. Subsequent records are moved to "the left", so that there aren't any gaps between records. 
@@ -34,16 +33,16 @@ Update: First it is checked if the same page can accomadate the updated record. 
 <br><br>
 
 ## Indexing 
-
 B+ Tree indexes can be created on any attribute(s), for any data-type. 
 The non-leaf nodes of the tree contain 'pointers' to go to the appropriate leaf nodes. The leaf nodes contain the actual key values and the corresponding RIDs for that record. <br><br>
 So, record retrieval works in the following way:<br>
-<li>Navigate to the appropriate leaf node<li>
-<li> Search that leaf node for exact key, and fetch the RID from that key,rid tuple<li>
+<li>Navigate to the appropriate leaf node</li>
+<li> Search that leaf node for exact key, and fetch the RID from that key,rid tuple</li>
 <li> Fetch actual record from the heap-file</li>
 
-<br><b>P.S. Range selects/queries are also supported </b>
-The following diagram depicts the indexing structure:
+<br><b>P.S. Range selects/queries are also supported </b><br><br><br>
+The following diagram depicts the indexing structure:<br>
+![alt text](https://github.com/pushkarmoi/NotNaive_RDBMS/blob/master/tree.png)
 
 ## Selection, Projection, Aggregate operations (min, max, sum, average)
 
