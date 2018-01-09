@@ -49,6 +49,3 @@ The following diagram depicts the indexing structure:<br>
 These operators are applied 'on-the-fly' to records.
 
 ## Joins (Block-Nested loop and Index-nested loop)
-
-
-
